@@ -75,10 +75,14 @@ def train_model(train_loader, val_loader, loss_func, optimizer, scheduler, num_e
 
 
 if __name__ == "__main__":
+
     model = ResNeXtUNet().to(device)
+
     optimizer = torch.optim.Adam(model.parameters(), lr=1e-3)
     scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, 'max', patience=3)
-    num_epochs = 6
+    num_epochs = 20
+
     loss_history, train_history, val_history = train_model(train_dataloader, val_dataloader, dice_coef_loss, optimizer, scheduler, num_epochs)
+    
     torch.save(model, 'model.pth')
 
