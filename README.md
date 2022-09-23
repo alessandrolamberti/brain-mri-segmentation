@@ -80,4 +80,9 @@ The following is an example of the model's predictions on the test set.
 
 ![](images/prediction.png)
 
+## TODO
+- [ ] Make hyperparameters configurable
+- [ ] Dockerize
+- [ ] Web app + API
+- [ ] Test more models?
 
