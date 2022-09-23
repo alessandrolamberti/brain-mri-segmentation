@@ -66,7 +66,7 @@ class ResNeXtUNet(nn.Module):
         
         return out
 ```
-The model is trained for 20 epochs with a batch size of 16. The model is trained on a Nvidia RTX 3060 GPU.
+The model is trained for 50 epochs with a batch size of 16. The model is trained on a Nvidia RTX 3060 GPU.
 
 ## Loss
 The loss function used in this project is the combination of BCE (Binary Cross Entropy) and Dice loss.
@@ -74,7 +74,7 @@ The loss function used in this project is the combination of BCE (Binary Cross E
 ![](images/loss2.png)
 
 ## Results
-The model managed to achieve a Mean DICE on validation: 0.938 and a Mean IoU of the test images of - 92.0%.
+The model managed to achieve a Mean DICE on validation: 0.938 and a Mean IoU of the test images of - 92.28%.
 
 The following is an example of the model's predictions on the test set.
 
